@@ -134,7 +134,8 @@ if __name__ == '__main__':
     fakes = writer.generate(args.text)
     for i, fake in enumerate(fakes):
         dst_path = args.output.parent / (args.output.stem + f'_{i:03d}' + args.output.suffix)
+        dst_path = str(dst_path) + str(".png")
         print("HELLO")
-        print("PATH: ", str(dst_path + ".png"))
-        cv2.imwrite(str(dst_path + ".png"), fake)
+        print("PATH: ", str(dst_path))
+        cv2.imwrite(str(dst_path), fake)
     print('Done')
