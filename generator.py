@@ -136,5 +136,5 @@ if __name__ == '__main__':
         dst_path = args.output.parent / (args.output.stem + f'_{i:03d}' + args.output.suffix)
         print("HELLO")
         print("PATH: ", str(dst_path + ".png"))
-        cv2.imwrite(str(dst_path), fake)
+        cv2.imwrite(str(dst_path + ".png"), fake)
     print('Done')
