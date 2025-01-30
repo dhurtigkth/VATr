@@ -135,6 +135,6 @@ if __name__ == '__main__':
     for i, fake in enumerate(fakes):
         dst_path = args.output.parent / (args.output.stem + f'_{i:03d}' + args.output.suffix)
         print("HELLO")
-        print("PATH: ", str(dst_path))
+        print("PATH: ", str(dst_path + ".png"))
         cv2.imwrite(str(dst_path), fake)
     print('Done')
